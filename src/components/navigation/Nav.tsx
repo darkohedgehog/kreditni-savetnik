@@ -17,39 +17,27 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/",
+    title: "Keš krediti",
+    href: "/kalkulatori",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
-    title: "Hover Card",
-    href: "/",
+    title: "Auto krediti",
+    href: "/kalkulatori",
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
-    title: "Progress",
+    title: "Refinansirajući kredit",
     href: "/",
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
   },
   {
-    title: "Scroll-area",
-    href: "/",
+    title: "Stambeni krediti",
+    href: "/kalkulatori",
     description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
 ]
 
