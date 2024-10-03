@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import NavigationMain from "@/components/navigation/NavigationMain";
 import NavTop from "@/components/navigation/NavTop";
+import BackgroundBeams from "@/components/ui/BackgroundBeams";
 
 
 const geistSans = localFont({
@@ -28,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -38,9 +39,15 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <NavTop  />
-            <NavigationMain  />
-            {children}
+            <div className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none">
+              <BackgroundBeams />
+            </div>
+          {/* Sadržaj aplikacije sa većim z-indexom */}
+           <div className="relative z-10">
+              <NavTop />
+              <NavigationMain />
+               {children}
+          </div>
           </ThemeProvider>
       </body>
     </html>
