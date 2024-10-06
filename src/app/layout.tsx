@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import NavigationMain from "@/components/navigation/NavigationMain";
 import NavTop from "@/components/navigation/NavTop";
 import BackgroundBeams from "@/components/ui/BackgroundBeams";
+import Footer from "@/components/Footer";
 
 
 const geistSans = localFont({
@@ -47,6 +48,7 @@ export default function RootLayout({
               <NavTop />
               <NavigationMain />
                {children}
+               <Footer  />
           </div>
           </ThemeProvider>
       </body>
