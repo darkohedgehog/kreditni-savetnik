@@ -42,7 +42,7 @@ export function HeroSectionWithBeamsAndGrid() {
       >
         <div className="rounded-[24px] border border-neutral-200 bg-white p-2 dark:border-neutral-700 dark:bg-black">
           <Image
-            src="https://assets.aceternity.com/pro/aceternity-landing.webp"
+            src="/savetnica.webp"
             alt="header"
             width={1920}
             height={1080}
