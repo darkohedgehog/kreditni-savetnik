@@ -6,10 +6,10 @@ import { WobbleCard } from "../ui/wobble-card";
 export function WobbleCardSection() {
   return (
     <>
-    <h1 className="flex items-center justify-center text-3xl mb-10 font-bold lg:text-4xl">
+    <h1 className="flex items-center justify-center text-3xl mb-16 font-bold lg:text-4xl">
       Zašto odabrati nas?
     </h1>
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full mt-4">
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-blue-800 min-h-[500px] lg:min-h-[300px]"
         className=""
