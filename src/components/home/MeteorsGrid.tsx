@@ -1,34 +1,42 @@
 import React from "react";
 import { MeteorsBox } from "./MeteorsBox";
+import { GiCash } from "react-icons/gi";
+import { TbTransactionEuro, TbHomeHeart } from "react-icons/tb";
+import { IoCarSportOutline } from "react-icons/io5";
 
 export function MeteorsGrid() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-2 mt-24 mx-auto container justify-center items-center">
+    <>
+    <h1 className="flex items-center justify-center mt-16 text-3xl lg:text-4xl font-bold">
+      Uobičajene aplikacije za kredit
+      </h1>
+    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-2 mt-20 mx-auto container justify-center items-center">
       {/* Prikazujemo četiri instance MeteorsBox sa različitim podacima */}
       <MeteorsBox 
-        title="Meteors because they&apos;re cool" 
-        description="I don&apos;t know what to write so I&apos;ll just paste something cool here." 
-        buttonText="Explore"
+        icon= {<GiCash />}
+        title="Dinarski keš kredit" 
+        buttonText="Istraži"
+        buttonLink="/krediti"
+      />
+      <MeteorsBox 
+        icon={<TbTransactionEuro />}
+        title="Krediti za refinansiranje" 
+        buttonText="Istraži"
+        buttonLink="/krediti"
+      />
+      <MeteorsBox 
+        icon={<TbHomeHeart />}
+        title="Stambeni krediti" 
+        buttonText="Istraži"
         buttonLink="/"
       />
       <MeteorsBox 
-        title="Shooting Stars" 
-        description="Shooting stars are a sight to behold on a clear night." 
-        buttonText="Discover"
-        buttonLink="/"
-      />
-      <MeteorsBox 
-        title="Asteroids and Meteors" 
-        description="Learn about the difference between asteroids and meteors." 
-        buttonText="Learn More"
-        buttonLink="/"
-      />
-      <MeteorsBox 
-        title="Meteor Showers" 
-        description="Meteor showers happen at regular intervals each year." 
-        buttonText="View Dates"
+        icon={<IoCarSportOutline />}
+        title="Auto kredit" 
+        buttonText="Istraži"
         buttonLink="/"
       />
     </div>
+    </>
   );
 }
