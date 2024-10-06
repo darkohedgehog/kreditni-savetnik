@@ -5,55 +5,58 @@ import { WobbleCard } from "../ui/wobble-card";
 
 export function WobbleCardSection() {
   return (
+    <>
+    <h1 className="flex items-center justify-center text-3xl mb-10 font-bold lg:text-4xl">
+      Zašto odabrati nas?
+    </h1>
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-blue-800 min-h-[500px] lg:min-h-[300px]"
         className=""
       >
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Gippity AI powers the entire universe
+            Štedimo Vaše vreme
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+          Uštedite vreme i novac. Bez poseta banci, besplatno pronalazimo idealno rešenje prilagođeno Vašim potrebama.
           </p>
         </div>
         <Image
-          src="/kreditnisavetnik.webp"
-          width={500}
-          height={500}
+          src="/savetnica.webp"
+          width={350}
+          height={300}
           alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          priority={false}
+          className="absolute -right-4 lg:-right-[5%] grayscale filter -bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
         <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          No shirt, no shoes, no weapons.
+          Najbolja ponuda
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          If someone yells “stop!”, goes limp, or taps out, the fight is over.
+        Proučavamo ponude svih banaka u Republici Srbiji i u najkraćem roku nalazimo optimalno rešenje za Vas.
         </p>
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
           <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Signup for blazing-fast cutting-edge state of the art Gippity AI
-            wrapper today!
+            Sigurnost i privatnost
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+          Vaša sigurnost i privatnost imaju prioritet. Brinemo o Vama i za Vas nalazimo idealno rešenje u najkraćem roku.
           </p>
         </div>
         <Image
           src="/kreditnisavetnik.webp"
-          width={500}
-          height={500}
+          width={350}
+          height={300}
           alt="linear demo image"
-          className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+          className="absolute -right-10 md:-right-[40%] lg:-right-[7%] -bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
     </div>
+    </>
   );
 }
