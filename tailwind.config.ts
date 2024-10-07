@@ -54,6 +54,8 @@ const config: Config = {
 			darkblue:'#9290C3',
 			purple:'#1B1A55',
 			accentwhite:'#F5EFE6',
+			'card-bg-light': '#dfe7fd',
+            'card-bg-dark': '#011638',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
