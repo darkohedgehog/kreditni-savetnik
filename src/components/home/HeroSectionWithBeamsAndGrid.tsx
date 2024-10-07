@@ -10,29 +10,29 @@ export function HeroSectionWithBeamsAndGrid() {
     <div
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-20 md:px-8 md:py-40"
     >
-      <h2 className="text-balance relative z-20 mx-auto mb-4 mt-4 max-w-4xl text-center text-3xl font-semibold tracking-tight text-gray-700 dark:text-neutral-300 md:text-7xl">
+      <h2 className="text-balance relative z-20 mx-auto mb-4 mt-4 max-w-4xl text-center text-3xl font-semibold tracking-tight text-purple dark:text-darkblue md:text-7xl">
         <Balancer>
           Vaš partner u finansijskom,{" "}
           <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
-            <div className="text-black [text-shadow:0_0_rgba(0,0,0,0.1)] dark:text-white">
+            <div className="text-darkblue [text-shadow:0_0_rgba(0,0,0,0.1)] dark:text-accentblue">
               <span className="">planiranju.</span>
             </div>
           </div>
         </Balancer>
       </h2>
-      <p className="relative z-50 mx-auto mt-4 max-w-lg px-4 text-center text-base/6 text-gray-600 dark:text-gray-200">
+      <p className="relative z-50 mx-auto mt-4 max-w-lg px-4 text-center text-base/6 text-[#5C5470] dark:text-[#B9B4C7]">
         Krediti na dlanu - Pristupačni krediti i stručni saveti. Vaš partner u finansijskom planiranju
       </p>
       <div className="mb-10 mt-8 flex w-full flex-col items-center justify-center gap-4 px-8 sm:flex-row md:mb-20">
         <Link
           href="/kontakt"
-          className="group relative z-20 flex h-10 w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-black p-px px-4 py-2 text-center text-sm font-semibold leading-6 text-white no-underline transition duration-200 dark:bg-white dark:text-black sm:w-52"
+          className="group relative z-20 flex h-10 w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-darkblue p-px px-4 py-2 text-center text-sm font-semibold leading-6 text-white no-underline transition duration-200 dark:bg-[#B9B4C7] dark:text-black sm:w-52"
         >
           Kontakt
         </Link>
         <Link
           href="/krediti"
-          className="group relative z-20 flex h-10 w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-white p-px px-4 py-2 text-sm font-semibold leading-6 text-black no-underline shadow-input transition duration-200 hover:-translate-y-0.5 dark:bg-neutral-800 dark:text-white sm:w-52"
+          className="group relative z-20 flex h-10 w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-accentblue p-px px-4 py-2 text-sm font-semibold leading-6 text-white no-underline shadow-input transition duration-200 hover:-translate-y-0.5 dark:bg-darkblue dark:text-white sm:w-52"
         >
           Krediti
         </Link>

@@ -6,7 +6,7 @@ import { WobbleCard } from "../ui/wobble-card";
 export function WobbleCardSection() {
   return (
     <>
-    <h1 className="flex items-center justify-center text-3xl mb-16 font-bold lg:text-4xl">
+    <h1 className="flex items-center justify-center text-3xl mb-16 font-bold lg:text-4xl text-purple dark:text-darkblue">
       Zašto odabrati nas?
     </h1>
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full mt-4">
@@ -15,7 +15,7 @@ export function WobbleCardSection() {
         className=""
       >
         <div className="max-w-xs">
-          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-accentwhite">
             Štedimo Vaše vreme
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
@@ -32,7 +32,7 @@ export function WobbleCardSection() {
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-accentwhite">
           Najbolja ponuda
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
@@ -41,7 +41,7 @@ export function WobbleCardSection() {
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-accentwhite">
             Sigurnost i privatnost
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">

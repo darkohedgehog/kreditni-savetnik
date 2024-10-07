@@ -17,16 +17,16 @@ export function MeteorsBox({ title, icon, buttonText, buttonLink }: MeteorsBoxPr
       <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
       <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center gap-8">
 
-        <div className="flex items-center justify-center text-5xl">
+        <div className="flex items-center justify-center text-5xl text-blue-800">
           {icon}
         </div>
 
-        <h1 className="font-bold text-xl text-white mb-4 relative z-50">
+        <h1 className="font-bold text-xl text-accentblue dark:text-darkblue mb-4 relative z-50">
           {title}
         </h1>
         <Link
         href={buttonLink}>
-        <button className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300">
+        <button className="border px-4 py-1 rounded-lg border-gray-500 text-accentwhite">
           {buttonText}
         </button>
         </Link>
