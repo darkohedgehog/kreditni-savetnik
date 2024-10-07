@@ -14,7 +14,7 @@ interface MeteorsBoxProps {
 export function MeteorsBox({ title, icon, buttonText, buttonLink }: MeteorsBoxProps) {
   return (
     <div className="w-full relative max-w-xs mx-auto">
-      <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
+      <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-lg blur-3xl" />
       <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center gap-8">
 
         <div className="flex items-center justify-center text-5xl text-blue-800">
