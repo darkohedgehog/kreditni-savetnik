@@ -46,23 +46,23 @@ export function Nav() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Naslovna</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-purple dark:text-darkblue">Naslovna</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-accentwhite to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     {/** 
                      <Icons.logo className="h-6 w-6" />
                     */}
                     
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <div className="mb-2 mt-4 text-lg font-medium text-purple">
                       Kreditni savtenik
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
+                    <p className="text-sm leading-tight text-muted-foreground text-darkblue">
                       Beautifully designed components that you can copy and
                       paste into your apps. Accessible. Customizable. Open
                       Source.
@@ -83,7 +83,7 @@ export function Nav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Kalkulatori</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-purple dark:text-darkblue">Kalkulatori</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -100,7 +100,7 @@ export function Nav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/kontakt" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-purple dark:text-darkblue`}>
               Kontakt
             </NavigationMenuLink>
           </Link>
