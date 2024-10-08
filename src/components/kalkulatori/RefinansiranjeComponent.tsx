@@ -24,8 +24,8 @@ const RefinansiranjeComponent: React.FC = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-4">
-      <h1 className="text-xl font-bold mb-4">Keš Kredit Kalkulator</h1>
+    <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-16">
+      <h1 className="text-xl font-bold mb-4">Kredit za refinansiranje kalkulator</h1>
 
       <div>
         <label className="block text-sm font-medium">Iznos kredita</label>

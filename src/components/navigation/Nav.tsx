@@ -18,25 +18,25 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Keš krediti",
-    href: "/kalkulatori",
+    href: "/kalkulatori/kes-kredit",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
     title: "Auto krediti",
-    href: "/kalkulatori",
+    href: "/kalkulatori/auto-kredit",
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
     title: "Refinansirajući kredit",
-    href: "/",
+    href: "/kalkulatori/kredit-za-refinansiranje",
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
   },
   {
     title: "Stambeni krediti",
-    href: "/kalkulatori",
+    href: "/kalkulatori/stambeni-kredit",
     description: "Visually or semantically separates content.",
   },
 ]
