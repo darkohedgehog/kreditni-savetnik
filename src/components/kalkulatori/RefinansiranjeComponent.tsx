@@ -24,8 +24,8 @@ const RefinansiranjeComponent: React.FC = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-16">
-      <h1 className="text-xl font-bold mb-4">Kredit za refinansiranje kalkulator</h1>
+    <div className="max-w-xl mx-auto p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-md space-y-4 mt-16">
+      <h1 className="text-xl font-bold mb-4 text-purple dark:text-accentblue">Kredit za refinansiranje</h1>
 
       <div>
         <label className="block text-sm font-medium">Iznos kredita</label>
@@ -58,7 +58,7 @@ const RefinansiranjeComponent: React.FC = () => {
           value={kamata}
           readOnly
           className="w-full px-4 py-2 border bg-gray-100 rounded-md
-          focus:outline-none"
+          focus:outline-none text-black"
         />
       </div>
 
