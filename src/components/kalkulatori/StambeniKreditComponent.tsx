@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const StambeniKreditComponent: React.FC = () => {
   const [kredit, setKredit] = useState<number>(0);
   const [meseci, setMeseci] = useState<number>(0);
-  const kamata: number = 8.95;
+  const kamata: number = 5.03;
   const [rata, setRata] = useState<string>('');
   const [ukupno, setUkupno] = useState<string>('');
 
