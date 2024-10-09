@@ -1,4 +1,6 @@
 "use client"
+
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const StambeniKreditComponent: React.FC = () => {
@@ -24,10 +26,30 @@ const StambeniKreditComponent: React.FC = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-md space-y-4 mt-16">
-      <h1 className="text-xl font-bold mb-4 text-purple dark:text-accentblue">Stambeni krediti</h1>
+    <>
+    <h1 className='flex items-center justify-center uppercase text-3xl lg:text-4xl font-bold text-purple dark:text-accentblue mt-16'>
+      Kredit za refinansiranje
+      </h1>
+    <div className='grid grid-cols-1 lg:grid-cols-2 container items-center justify-evenly mx-auto mb-8'>
+      <div className="mx-2 lg:mx-auto lg:w-[420px] max-w-screen-sm p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-lg space-y-4 mt-16 shadow-darkblue">
+        <h2 className='flex items-center justify-center text-purple dark:text-darkblue font-semibold text-2xl lg:text-3xl mt-16'>
+          Stambeni krediti
+        </h2>
+        <p className='font-semibold leading-5 mt-4'>
+        Stambeni kredit je dugoročna finansijska podrška za kupovinu, izgradnju ili renoviranje vašeg doma, uz prilagođene uslove otplate.
+        </p>
+   <Image 
+     src={'/stambenikredit.svg'} 
+     alt={'kredit'}
+     width={500}
+     height={500}
+     priority={false}
+     className='flex items-center justify-center object-center mx-auto py-4' />
+      </div>
+    <div className="mx-auto p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-lg space-y-4 mt-16 shadow-darkblue">
+      <h1 className="text-xl font-bold text-purple dark:text-accentblue mb-4">Stambeni krediti</h1>
 
-      <div>
+      <div className='w-[320px] lg:w-[400px]'>
         <label className="block text-sm font-medium">Iznos kredita</label>
         <input
           type="number"
@@ -94,6 +116,8 @@ const StambeniKreditComponent: React.FC = () => {
         Izračunaj
       </button>
     </div>
+    </div>
+    </>
   );
 };
 

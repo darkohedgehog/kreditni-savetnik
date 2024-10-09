@@ -1,4 +1,6 @@
 "use client"
+
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const AutoKreditComponent: React.FC = () => {
@@ -24,10 +26,30 @@ const AutoKreditComponent: React.FC = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-md space-y-4 mt-16">
-      <h1 className="text-xl font-bold mb-4 text-purple dark:text-accentblue">Auto krediti</h1>
+    <>
+    <h1 className='flex items-center justify-center uppercase text-3xl lg:text-4xl font-bold text-purple dark:text-accentblue mt-16'>
+      Kredit za kupovinu auta
+      </h1>
+    <div className='grid grid-cols-1 lg:grid-cols-2 container items-center justify-evenly mx-auto mb-8'>
+      <div className="mx-2 lg:mx-auto lg:w-[420px] max-w-screen-sm p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-lg space-y-4 mt-16 shadow-darkblue">
+        <h2 className='flex items-center justify-center text-purple dark:text-darkblue font-semibold text-2xl lg:text-3xl mt-2'>
+          Auto krediti
+        </h2>
+        <p className='font-semibold leading-5 mt-4'>
+        Auto kredit vam pruža priliku da jednostavno i povoljno finansirate kupovinu novog ili polovnog automobila.
+        </p>
+   <Image 
+     src={'/car-credit.svg'} 
+     alt={'kes-kredit'}
+     width={350}
+     height={300}
+     priority={false}
+     className='flex items-center justify-center object-center mx-auto' />
+      </div>
+    <div className="mx-auto p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-lg space-y-4 mt-16 shadow-darkblue">
+      <h1 className="text-xl font-bold text-purple dark:text-accentblue mb-4">Auto krediti</h1>
 
-      <div>
+      <div className='w-[320px] lg:w-[400px]'>
         <label className="block text-sm font-medium">Iznos kredita</label>
         <input
           type="number"
@@ -94,6 +116,8 @@ const AutoKreditComponent: React.FC = () => {
         Izračunaj
       </button>
     </div>
+    </div>
+    </>
   );
 };
 
