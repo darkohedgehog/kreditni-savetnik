@@ -20,24 +20,24 @@ const components: { title: string; href: string; description: string }[] = [
     title: "Keš krediti",
     href: "/kalkulatori/kes-kredit",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Dinarski keš kredit omogućava brzu i jednostavnu pozajmicu bez devizne klauzule, idealan za pokrivanje neplaniranih troškova.",
   },
   {
     title: "Auto krediti",
     href: "/kalkulatori/auto-kredit",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Auto kredit vam pruža priliku da jednostavno i povoljno finansirate kupovinu novog ili polovnog automobila.",
   },
   {
     title: "Refinansirajući kredit",
     href: "/kalkulatori/kredit-za-refinansiranje",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Refinansirajući kredit omogućava vam da objedinite postojeće obaveze i smanjite mesečne rate uz povoljnije uslove otplate.",
   },
   {
     title: "Stambeni krediti",
     href: "/kalkulatori/stambeni-kredit",
-    description: "Visually or semantically separates content.",
+    description: "Stambeni kredit je dugoročna finansijska podrška za kupovinu, izgradnju ili renoviranje vašeg doma, uz prilagođene uslove otplate.",
   },
 ]
 
