@@ -1,5 +1,6 @@
 "use client"
-import { div } from 'framer-motion/client';
+
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const KesKreditComponent: React.FC = () => {
@@ -29,14 +30,26 @@ const KesKreditComponent: React.FC = () => {
     <h1 className='flex items-center justify-center uppercase text-3xl lg:text-4xl font-bold text-purple dark:text-accentblue mt-16'>
       Dinarski keš kredit
       </h1>
-    <div className='grid grid-cols-1 lg:grid-cols-2 container items-center justify-center'>
-      <div className="mx-auto w-[400px] p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-md space-y-4 mt-16">
-lootie file
+    <div className='grid grid-cols-1 lg:grid-cols-2 container items-center justify-evenly mx-auto mb-8'>
+      <div className="mx-2 lg:mx-auto lg:w-[420px] max-w-screen-sm p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-lg space-y-4 mt-16 shadow-darkblue">
+        <h2 className='flex items-center justify-center text-purple dark:text-darkblue font-semibold text-2xl lg:text-3xl mt-10'>
+          Brzi keš krediti
+        </h2>
+        <p className='font-semibold leading-5 mt-4'>
+        Dinarski keš kredit omogućava brzu i jednostavnu pozajmicu bez devizne klauzule, idealan za pokrivanje neplaniranih troškova.
+        </p>
+   <Image 
+     src={'/cash-credit.svg'} 
+     alt={'kes-kredit'}
+     width={500}
+     height={500}
+     priority={false}
+     className='flex items-center justify-center py-6' />
       </div>
-    <div className="mx-auto p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-md space-y-4 mt-16">
+    <div className="mx-auto p-6 bg-card-bg-light dark:bg-card-bg-dark rounded-lg shadow-lg space-y-4 mt-16 shadow-darkblue">
       <h1 className="text-xl font-bold text-purple dark:text-accentblue mb-4">Dinarski keš kredit</h1>
 
-      <div className='w-[400px]'>
+      <div className='w-[320px] lg:w-[400px]'>
         <label className="block text-sm font-medium">Iznos kredita</label>
         <input
           type="number"
