@@ -15,6 +15,7 @@ interface FormFields {
   loanAmount: string;
   repaymentTerm: string;
   message: string;
+  consent: boolean; // Za checkbox za pristanak
 }
 
 const ContactForm = () => {
@@ -31,6 +32,7 @@ const ContactForm = () => {
     loanAmount: "",
     repaymentTerm: "",
     message: "",
+    consent: false,
   });
 
   const [loading, setLoading] = useState<boolean>(false);
@@ -45,7 +47,12 @@ const ContactForm = () => {
 
   const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value, checked } = e.target;
-    if (checked) {
+    if (name === "consent") {
+      setForm({
+        ...form,
+        consent: checked,
+      });
+    } else if (checked) {
       setForm({
         ...form,
         [name]: [...(form[name as keyof FormFields] as string[]), value],
@@ -74,6 +81,7 @@ const ContactForm = () => {
       loanAmount,
       repaymentTerm,
       message,
+      consent,
     } = form;
 
     if (
@@ -87,7 +95,8 @@ const ContactForm = () => {
       creditType.length === 0 ||
       !loanAmount ||
       !repaymentTerm ||
-      !message
+      !message ||
+      !consent
     ) {
       alert("Molimo popunite sva polja.");
       return;
@@ -133,6 +142,7 @@ const ContactForm = () => {
             loanAmount: "",
             repaymentTerm: "",
             message: "",
+            consent: false,
           });
         },
         (error) => {
@@ -395,6 +405,20 @@ const ContactForm = () => {
             className="py-4 px-6 mx-2 placeholder:text-secondary text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
+        {/* Pristanak za obradu podataka */}
+        <label className="flex items-center mx-5">
+          <input
+            type="checkbox"
+            name="consent"
+            checked={form.consent}
+            onChange={handleCheckboxChange}
+            required
+          />
+          <span className="ml-2 text-white">
+            Slažem se sa korišćenjem obradom mojih podataka.
+          </span>
+        </label>
+
 
         {/* Dugme za slanje */}
         <button
