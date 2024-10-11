@@ -52,7 +52,7 @@ export function Nav() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-accentwhite to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     {/** 
@@ -63,21 +63,19 @@ export function Nav() {
                       Kreditni savtenik
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground text-darkblue">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
+                      INFINITUM MSS: Vaš partner u finansijskom planiranju
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
               <ListItem href="/o-nama" title="O nama">
-                Re-usable components built using Radix UI and Tailwind CSS.
+               Više od 15 godina iskustva u bankarskom sektoru i finansijama
               </ListItem>
               <ListItem href="/krediti" title="Krediti">
-                How to install dependencies and structure your app.
+                U najkraćem roku pronalazimo najbolje rešenje za Vas...
               </ListItem>
-              <ListItem href="/blog" title="Blog">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem href="/krediti" title="Krediti">
+                Uštedite vreme i novac uz našu pomoć...
               </ListItem>
             </ul>
           </NavigationMenuContent>
