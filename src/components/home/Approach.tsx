@@ -9,7 +9,7 @@ export default function Approach() {
     return (
       <>
         {/* Features Section: Boxes with Icons */}
-        <div className="">
+        
           <h1 className='flex items-center justify-center text-3xl lg:text-4xl font-bold text-purple dark:text-darkblue mt-16'>
             Kako mi to radimo?
           </h1>
@@ -54,7 +54,7 @@ export default function Approach() {
               </div>
             </div>
           </div>
-        </div>
+        
         {/* END Features Section: Boxes with Icons */}
       </>
     );
