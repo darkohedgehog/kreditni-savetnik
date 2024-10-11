@@ -1,4 +1,7 @@
-import CalculatorPageComponent from '@/components/kalkulatori/CalculatorPageComponent';
+import dynamic from 'next/dynamic';
+
+
+const CalculatorPageComponent = dynamic(() => import('@/components/kalkulatori/CalculatorPageComponent'));
 
 
 const KalkulatoriPage = () => {

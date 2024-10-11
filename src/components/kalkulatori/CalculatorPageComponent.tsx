@@ -19,7 +19,7 @@ const CalculatorPageComponent = () => {
             alt="header"
             width={1920}
             height={1080}
-            priority={false}
+            priority
             className="rounded-[20px]"
           />
         </div>
