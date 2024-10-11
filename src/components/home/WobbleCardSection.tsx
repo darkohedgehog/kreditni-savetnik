@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { WobbleCard } from "../ui/wobble-card";
 
-export function WobbleCardSection() {
+export default function WobbleCardSection() {
   return (
     <>
     <h1 className="flex items-center justify-center text-3xl mb-16 font-bold lg:text-4xl text-purple dark:text-darkblue">

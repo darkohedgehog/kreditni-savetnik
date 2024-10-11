@@ -4,7 +4,7 @@ import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 import Link from "next/link";
 
-export function HeroSectionWithBeamsAndGrid() {
+export default function HeroSectionWithBeamsAndGrid() {
  
   return (
     <div

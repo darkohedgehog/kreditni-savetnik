@@ -4,7 +4,7 @@ import { GiCash } from "react-icons/gi";
 import { TbTransactionEuro, TbHomeHeart } from "react-icons/tb";
 import { IoCarSportOutline } from "react-icons/io5";
 
-export function MeteorsGrid() {
+export default function MeteorsGrid() {
   return (
     <>
     <h1 className="flex items-center justify-center mt-16 text-3xl lg:text-4xl font-bold text-purple dark:text-darkblue">
