@@ -1,5 +1,7 @@
-import AboutUs from '@/components/about/AboutUs'
-import React from 'react'
+import dynamic from 'next/dynamic';
+
+
+const AboutUs = dynamic(() => import('@/components/about/AboutUs'));
 
 const AboutPage = () => {
   return (

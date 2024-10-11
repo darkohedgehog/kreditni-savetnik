@@ -1,6 +1,7 @@
-import ContactForm from '@/components/kontakt/ContactForm'
-import ContactUs from '@/components/kontakt/ContactUs'
-import React from 'react'
+import dynamic from 'next/dynamic';
+
+const ContactForm = dynamic(() => import('@/components/kontakt/ContactForm'));
+const ContactUs = dynamic(() => import('@/components/kontakt/ContactUs'));
 
 const ContactPage = () => {
   return (
