@@ -155,18 +155,21 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-2/3">
-      <h1 className="flex items-center justify-center my-3 text-xl font-semibold uppercase text-accent dark:text-accentDark">
-        Kontakt forma
+    <div className="max-w-4xl flex flex-col justify-center mt-16 px-8 mx-auto">
+      <h1 className="flex items-center justify-center my-3 text-2xl font-semibold uppercase text-purple dark:text-accentblue">
+        Da li želite ponudu?
       </h1>
+      <h2 className="flex items-center justify-center my-3 text-xl font-semibold text-purple dark:text-accentblue">
+        Pošaljite Vaš zahtev
+      </h2>
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="my-8 flex flex-col gap-6 border-2 border-[#6C6C6C] shadow-lg shadow-accent dark:shadow-accentDark rounded-[30px]"
+        className="my-8 flex flex-col gap-6 border-2 border-[#6C6C6C] shadow-lg shadow-accent dark:shadow-accentDark rounded-[30px] bg-card-bg-light dark:bg-card-bg-dark"
       >
         {/* Ime */}
         <label className="flex flex-col">
-          <span className="text-white font-medium my-4 mx-5">Vaše ime</span>
+          <span className="text-gray-700 dark:text-darkblue font-medium my-4 mx-5">Vaše ime</span>
           <input
             type="text"
             name="name"
@@ -174,13 +177,13 @@ const ContactForm = () => {
             onChange={handleInputChange}
             placeholder="Kako se zovete?"
             required
-            className="py-4 px-6 mx-2 placeholder:text-secondary text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
+            className="py-4 px-6 mx-2 placeholder:text-gray-400 border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
 
         {/* Prezime */}
         <label className="flex flex-col">
-          <span className="text-white font-medium my-4 mx-5">Vaše prezime</span>
+          <span className="text-gray-700 dark:text-darkblue font-medium my-4 mx-5">Vaše prezime</span>
           <input
             type="text"
             name="lastName"
@@ -188,26 +191,26 @@ const ContactForm = () => {
             onChange={handleInputChange}
             placeholder="Kako se prezivate?"
             required
-            className="py-4 px-6 mx-2 placeholder:text-secondary text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
+            className="py-4 px-6 mx-2 placeholder:text-gray-400 text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
 
         {/* Datum rođenja */}
         <label className="flex flex-col">
-          <span className="text-white font-medium my-4 mx-5">Datum rođenja</span>
+          <span className="text-gray-700 dark:text-darkblue font-medium my-4 mx-5">Datum rođenja</span>
           <input
             type="date"
             name="dateOfBirth"
             value={form.dateOfBirth}
             onChange={handleInputChange}
             required
-            className="py-4 px-6 mx-2 text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
+            className="py-4 px-6 mx-2 text-gray-400 border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
 
         {/* Matična banka */}
         <label className="flex flex-col">
-          <span className="text-white font-medium my-4 mx-5">Matična banka</span>
+          <span className="text-gray-700 dark:text-darkblue font-medium my-4 mx-5">Matična banka</span>
           <input
             type="text"
             name="homeBank"
@@ -215,13 +218,13 @@ const ContactForm = () => {
             onChange={handleInputChange}
             placeholder="Vaša matična banka"
             required
-            className="py-4 px-6 mx-2 placeholder:text-secondary text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
+            className="py-4 px-6 mx-2 placeholder:text-gray-400 text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
 
         {/* Email */}
         <label className="flex flex-col">
-          <span className="text-white font-medium mb-4 mx-5">Vaš email</span>
+          <span className="text-gray-700 dark:text-darkblue font-medium mb-4 mx-5">Vaš email</span>
           <input
             type="email"
             name="email"
@@ -229,13 +232,13 @@ const ContactForm = () => {
             onChange={handleInputChange}
             placeholder="Koji je Vaš email?"
             required
-            className="py-4 px-6 mx-2 placeholder:text-secondary text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
+            className="py-4 px-6 mx-2 placeholder:text-gray-400 text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
 
         {/* Broj telefona */}
         <label className="flex flex-col">
-          <span className="text-white font-medium my-4 mx-5">Broj telefona</span>
+          <span className="text-gray-700 dark:text-darkblue font-medium my-4 mx-5">Broj telefona</span>
           <input
             type="tel"
             name="phoneNumber"
@@ -243,13 +246,13 @@ const ContactForm = () => {
             onChange={handleInputChange}
             placeholder="Vaš broj telefona"
             required
-            className="py-4 px-6 mx-2 placeholder:text-secondary text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
+            className="py-4 px-6 mx-2 placeholder:text-gray-400 text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
 
         {/* Status zaposlenosti */}
         <fieldset className="flex flex-col">
-          <legend className="text-white font-medium my-4 mx-5">Status zaposlenosti</legend>
+          <legend className="text-gray-700 dark:text-darkblue font-medium my-4 mx-5">Status zaposlenosti:</legend>
           <div className="mx-5 flex flex-col gap-2">
             <label className="flex items-center">
               <input
@@ -259,7 +262,7 @@ const ContactForm = () => {
                 checked={form.employmentStatus.includes("zaposlen za stalno")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Zaposlen za stalno</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Zaposlen za stalno</span>
             </label>
             <label className="flex items-center">
               <input
@@ -269,7 +272,7 @@ const ContactForm = () => {
                 checked={form.employmentStatus.includes("na određeno")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Na određeno</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Na određeno</span>
             </label>
             <label className="flex items-center">
               <input
@@ -279,7 +282,7 @@ const ContactForm = () => {
                 checked={form.employmentStatus.includes("preko PP ugovor")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Preko PP ugovor</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Preko PP ugovor</span>
             </label>
             {/* Penzioner */}
             <label className="flex items-center">
@@ -290,7 +293,7 @@ const ContactForm = () => {
                 checked={form.employmentStatus.includes("penzioner trajna/starosna penzija")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Penzioner trajna/starosna penzija</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Penzioner trajna/starosna penzija</span>
             </label>
             <label className="flex items-center">
               <input
@@ -300,7 +303,7 @@ const ContactForm = () => {
                 checked={form.employmentStatus.includes("invalidska penzija")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Invalidska penzija</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Invalidska penzija</span>
             </label>
             <label className="flex items-center">
               <input
@@ -310,15 +313,15 @@ const ContactForm = () => {
                 checked={form.employmentStatus.includes("porodična penzija")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Porodična penzija</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Porodična penzija</span>
             </label>
           </div>
         </fieldset>
 
         {/* Tip kredita */}
         <fieldset className="flex flex-col">
-          <legend className="text-white font-medium my-4 mx-5">
-            Tip kredita za koji ste zainteresovani
+          <legend className="text-gray-700 dark:text-darkblue font-medium my-4 mx-5">
+            Tip kredita za koji ste zainteresovani:
           </legend>
           <div className="mx-5 flex flex-col gap-2">
             <label className="flex items-center">
@@ -329,7 +332,7 @@ const ContactForm = () => {
                 checked={form.creditType.includes("dinarski keš kredit")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Dinarski keš kredit</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Dinarski keš kredit</span>
             </label>
             <label className="flex items-center">
               <input
@@ -339,7 +342,7 @@ const ContactForm = () => {
                 checked={form.creditType.includes("kredit za refinansiranje")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Kredit za refinansiranje</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Kredit za refinansiranje</span>
             </label>
             <label className="flex items-center">
               <input
@@ -349,7 +352,7 @@ const ContactForm = () => {
                 checked={form.creditType.includes("auto kredit")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Auto kredit</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Auto kredit</span>
             </label>
             <label className="flex items-center">
               <input
@@ -359,14 +362,14 @@ const ContactForm = () => {
                 checked={form.creditType.includes("stambeni kredit")}
                 onChange={handleCheckboxChange}
               />
-              <span className="ml-2 text-white">Stambeni kredit</span>
+              <span className="ml-2 text-purple dark:text-accentblue">Stambeni kredit</span>
             </label>
           </div>
         </fieldset>
 
         {/* Iznos kredita */}
         <label className="flex flex-col">
-          <span className="text-white font-medium my-4 mx-5">Iznos kredita</span>
+          <span className="text-gray-700 dark:text-darkblue font-medium my-4 mx-5">Iznos kredita</span>
           <input
             type="number"
             name="loanAmount"
@@ -374,13 +377,13 @@ const ContactForm = () => {
             onChange={handleInputChange}
             placeholder="Unesite iznos kredita"
             required
-            className="py-4 px-6 mx-2 placeholder:text-secondary text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
+            className="py-4 px-6 mx-2 placeholder:text-gray-400 text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
 
         {/* Predviđeni rok otplate */}
         <label className="flex flex-col">
-          <span className="text-white font-medium my-4 mx-5">Predviđeni rok otplate</span>
+          <span className="text-gray-700 dark:text-darkblue font-medium my-4 mx-5">Predviđeni rok otplate</span>
           <input
             type="number"
             name="repaymentTerm"
@@ -388,13 +391,13 @@ const ContactForm = () => {
             onChange={handleInputChange}
             placeholder="Unesite rok otplate u mesecima"
             required
-            className="py-4 px-6 mx-2 placeholder:text-secondary text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
+            className="py-4 px-6 mx-2 placeholder:text-gray-400 text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
 
         {/* Poruka */}
         <label className="flex flex-col">
-          <span className="text-white font-medium mb-4 mx-5">Vaša poruka</span>
+          <span className="text-gray-700 dark:text-darkblue font-medium mb-4 mx-5">Vaša poruka</span>
           <textarea
             rows={7}
             name="message"
@@ -402,7 +405,7 @@ const ContactForm = () => {
             onChange={handleInputChange}
             placeholder="Koja je Vaša poruka?"
             required
-            className="py-4 px-6 mx-2 placeholder:text-secondary text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
+            className="py-4 px-6 mx-2 pplaceholder:text-gray-400 text-white border border-[#6C6C6C] shadow-lg rounded-[30px] font-medium"
           />
         </label>
         {/* Pristanak za obradu podataka */}
@@ -423,10 +426,10 @@ const ContactForm = () => {
         {/* Dugme za slanje */}
         <button
           type="submit"
-          className="relative mb-6 inline-flex h-12 w-[200px] mx-5 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+          className="relative mb-6 inline-flex h-12 w-[200px] overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mx-auto"
         >
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-          <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-accent dark:text-accentDark backdrop-blur-3xl gap-3">
+          <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-accentblue dark:text-darkblue backdrop-blur-3xl gap-3">
             {loading ? "Šaljem..." : "Pošalji"}
             <FaLocationArrow />
           </span>
