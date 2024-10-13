@@ -16,25 +16,25 @@ export default function MeteorsGrid() {
         icon= {<GiCash />}
         title="Dinarski keš kredit" 
         buttonText="Istraži"
-        buttonLink="/krediti"
+        buttonLink="/krediti/dinarski-kes-kredit"
       />
       <MeteorsBox 
         icon={<TbTransactionEuro />}
         title="Krediti za refinansiranje" 
         buttonText="Istraži"
-        buttonLink="/krediti"
+        buttonLink="/krediti/kredit-za-refinansiranje"
       />
       <MeteorsBox 
         icon={<TbHomeHeart />}
         title="Stambeni krediti" 
         buttonText="Istraži"
-        buttonLink="/"
+        buttonLink="/krediti/stambeni-kredit"
       />
       <MeteorsBox 
         icon={<IoCarSportOutline />}
         title="Auto kredit" 
         buttonText="Istraži"
-        buttonLink="/"
+        buttonLink="/krediti/auto-krediti"
       />
     </div>
     </>
