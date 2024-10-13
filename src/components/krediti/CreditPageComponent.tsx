@@ -30,7 +30,7 @@ const CreditPageComponent = () => {
               <div className="mt-8">
                 <span className="text-blue-500 uppercase">{credit.title}</span>
                 <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-                  {credit.title}
+                  {credit.blogtitle}
                 </h1>
                 <p className="mt-2 text-gray-500 dark:text-gray-400">{credit.shortdesc}</p>
                 <div className="flex items-center justify-start mt-4">
