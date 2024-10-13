@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { Meteors } from "../ui/meteors";
 import Link from "next/link";
+import { FaLocationArrow } from "react-icons/fa6";
 
 
 // Definišemo tipove za props
@@ -26,9 +27,10 @@ export function MeteorsBox({ title, icon, buttonText, buttonLink }: MeteorsBoxPr
         </h1>
         <Link
         href={buttonLink}>
-        <button className="border px-4 py-1 rounded-lg border-gray-500 text-purple dark:text-accentwhite">
-          {buttonText}
-        </button>
+        <button className="border px-4 py-1 rounded-lg border-gray-500 text-purple dark:text-accentwhite flex items-center justify-center gap-2 transform transition-transform duration-200 hover:scale-105">
+        {buttonText}
+        <FaLocationArrow />
+       </button>
         </Link>
 
         {/* Meteor effect */}
