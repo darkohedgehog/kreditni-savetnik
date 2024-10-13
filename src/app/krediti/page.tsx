@@ -1,8 +1,11 @@
+import CreditPageComponent from '@/components/krediti/CreditPageComponent'
 import React from 'react'
 
 const CreditPage = () => {
   return (
-    <div>CreditPage</div>
+    <>
+     <CreditPageComponent />
+    </>
   )
 }
 
