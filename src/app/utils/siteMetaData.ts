@@ -68,5 +68,5 @@ interface SiteMetaData {
     },
   };
   
-  export default SiteMetaData;
+  export default siteMetadata;
   

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -6,6 +5,7 @@ import NavigationMain from "@/components/navigation/NavigationMain";
 import NavTop from "@/components/navigation/NavTop";
 import BackgroundBeams from "@/components/ui/BackgroundBeams";
 import Footer from "@/components/Footer";
+const siteMetadata = require('./utils/siteMetaData').default;
 
 
 const geistSans = localFont({
@@ -19,9 +19,48 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Kreditni savtenik",
-  description: "Usluga kreditnog i finansijskog savetovanja",
+export const metadata = {
+  metadataBase: siteMetadata.siteUrl, 
+  title: {
+    template: `%s | ${siteMetadata.title}`,
+    default: siteMetadata.title,
+  },
+  description: siteMetadata.description,
+  openGraph: {
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    url: siteMetadata.siteUrl,
+    siteName: siteMetadata.title,
+    images: [
+      {
+        url: `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`, // Full URL for social banner
+        width: 1200, // Default width for social banners
+        height: 630, // Default height for social banners
+        alt: siteMetadata.title,
+      },
+    ],
+    locale: siteMetadata.locale,
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    images: [`${siteMetadata.siteUrl}${siteMetadata.socialBanner}`], // Full URL for social banner
+    site: '@Zivic_Darko',
+  },
 };
 
 export default function RootLayout({
