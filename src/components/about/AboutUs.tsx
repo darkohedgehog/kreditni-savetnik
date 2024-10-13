@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaLocationArrow } from "react-icons/fa6";
+import Logo from '../logo/Logo';
 
 
 const AboutUs = () => {
@@ -40,6 +41,7 @@ const AboutUs = () => {
             </div>
         </div>
         <div className='flex items-center justify-center flex-col mt-20 gap-4'>
+            <Logo  />
            <h1 className='text-2xl lg:text-3xl font-bold text-purple dark:text-accentblue'>
             INFINITUM MSS
            </h1>

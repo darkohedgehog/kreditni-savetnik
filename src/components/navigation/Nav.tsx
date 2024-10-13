@@ -14,6 +14,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import Logo from "../logo/Logo"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -55,9 +56,8 @@ export function Nav() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    {/** 
-                     <Icons.logo className="h-6 w-6" />
-                    */}
+                    
+                    <Logo  />
                     
                     <div className="mb-2 mt-4 text-lg font-medium text-purple">
                       Kreditni savtenik

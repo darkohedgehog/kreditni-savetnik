@@ -4,6 +4,7 @@ import { FiFacebook } from "react-icons/fi";
 import { RiMessengerLine, RiLinkedinBoxFill, RiNextjsFill } from "react-icons/ri";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { GiHedgehog } from "react-icons/gi";
+import Logo from './logo/Logo';
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
             <Link href={"/"} className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                Logo
+                <Logo />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-accentDark"></span>
             </Link>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-accentblue">
