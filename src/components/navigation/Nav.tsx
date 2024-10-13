@@ -74,9 +74,6 @@ export function Nav() {
               <ListItem href="/krediti" title="Krediti">
                 U najkraćem roku pronalazimo najbolje rešenje za Vas...
               </ListItem>
-              <ListItem href="/krediti" title="Krediti">
-                Uštedite vreme i novac uz našu pomoć...
-              </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
