@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { credits } from '../../../data'
+import Image from 'next/image'
 
 const CreditPageComponent = () => {
   return (
@@ -14,14 +15,17 @@ const CreditPageComponent = () => {
 
         <hr className="my-8 border-gray-200 dark:border-gray-700"/>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-            <div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+            
             {credits.map((credit) => (
             <div key={credit.id}>
-              <img
+              <Image
                 className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-                src={`https://example.com/image/${credit.slug}.jpg`}
+                src={credit.image}
                 alt={credit.title}
+                width={500}
+                height={300}
+                priority
               />
               <div className="mt-8">
                 <span className="text-blue-500 uppercase">{credit.title}</span>
@@ -37,79 +41,7 @@ const CreditPageComponent = () => {
               </div>
             </div>
           ))}
-            </div>
-
-            <div>
-                <img className="object-cover object-center w-full h-64 rounded-lg lg:h-80" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""/>
-
-                <div className="mt-8">
-                    <span className="text-blue-500 uppercase">Auto krediti</span>
-
-                    <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-                        Kupovina auta na kredit
-                    </h1>
-
-                    <p className="mt-2 text-gray-500 dark:text-gray-400">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
-                        recusandae nulla veritatis id tempore sapiente
-                    </p>
-
-                    <div className="flex items-center justify-start mt-4">
-
-                        <Link href="/" className="inline-block text-blue-500 underline hover:text-blue-400">
-                            Read more
-                        </Link>
-                    </div>
-
-                </div>
-            </div>
-
-            <div>
-                <img className="object-cover object-center w-full h-64 rounded-lg lg:h-80" src="https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt=""/>
-
-                <div className="mt-8">
-                    <span className="text-blue-500 uppercase">Kredit za refinansiranje</span>
-
-                    <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-                        Refinansirajte sve svoje obaveze
-                    </h1>
-
-                    <p className="mt-2 text-gray-500 dark:text-gray-400">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
-                        recusandae nulla veritatis id tempore sapiente
-                    </p>
-
-                    <div className="flex items-center justify-start mt-4">
-
-                        <Link href="/" className="inline-block text-blue-500 underline hover:text-blue-400">
-                            Read more
-                        </Link>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <img className="object-cover object-center w-full h-64 rounded-lg lg:h-80" src="https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt=""/>
-
-                <div className="mt-8">
-                    <span className="text-blue-500 uppercase">Stambeni krediti</span>
-
-                    <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-                        Kupite svoj kutak za sebe i svoju porodicu
-                    </h1>
-
-                    <p className="mt-2 text-gray-500 dark:text-gray-400">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
-                        recusandae nulla veritatis id tempore sapiente
-                    </p>
-
-                    <div className="flex items-center justify-start mt-4">
-
-                        <Link href="/" className="inline-block text-blue-500 underline hover:text-blue-400">
-                            Read more
-                        </Link>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </section>
