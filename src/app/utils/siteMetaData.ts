@@ -1,4 +1,4 @@
-interface SiteMetadata {
+interface SiteMetaData {
     title: string;
     author: string;
     headerTitle: string;
@@ -28,7 +28,7 @@ interface SiteMetadata {
     };
   }
   
-  const siteMetadata: SiteMetadata = {
+  const siteMetadata: SiteMetaData = {
     title: 'INFINITUM MSS||Kreditni savetnik',
     author: 'Darko Živić',
     headerTitle: 'Kreditni savetnik',
@@ -68,5 +68,5 @@ interface SiteMetadata {
     },
   };
   
-  export default siteMetadata;
+  export default SiteMetaData;
   
