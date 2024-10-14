@@ -1,12 +1,18 @@
-import { IConfig, ISitemapField } from 'next-sitemap';
-const siteMetadata = require('./src/app/utils/siteMetadata').default;
+const siteMetadata = require("./src/app/utils/siteMetaData");
 
-const config: IConfig = {
+module.exports = {
   siteUrl: siteMetadata.siteUrl,
   generateRobotsTxt: true,
+  sitemapStylesheet: [
+    {
+      type: "text/xsl",
+      styleFile: "/sitemap.xsl",
+    },
+  ],
   changefreq: 'daily',
   priority: 0.7,
-  additionalPaths: async (_config): Promise<ISitemapField[]> => {
+  // Exclude dynamic paths for now
+  additionalPaths: async (config) => {
     return [
       {
         loc: '/', // Home page
@@ -27,32 +33,32 @@ const config: IConfig = {
         lastmod: new Date().toISOString(),
       },
       {
-        loc: '/krediti', // Blog page
+        loc: '/krediti',
         changefreq: 'monthly',
         priority: 0.8,
         lastmod: new Date().toISOString(),
       },
       {
-        loc: '/uslovi-koriscenja', // Terms page
+        loc: '/uslovi-koriscenja',
         changefreq: 'monthly',
         priority: 0.8,
         lastmod: new Date().toISOString(),
       },
       {
-        loc: '/pravila-privatnosti', // Privacy page
+        loc: '/pravila-privatnosti',
         changefreq: 'monthly',
         priority: 0.8,
         lastmod: new Date().toISOString(),
       },
       {
-        loc: '/kalkulatori', // Complaint page
+        loc: '/kalkulatori',
         changefreq: 'monthly',
         priority: 0.8,
         lastmod: new Date().toISOString(),
       },
     ];
   },
-  transform: async (_config, path): Promise<ISitemapField> => {
+  transform: async (_config, path) => {
     return {
       loc: path,
       changefreq: 'daily',
@@ -61,5 +67,3 @@ const config: IConfig = {
     };
   },
 };
-
-export default config;

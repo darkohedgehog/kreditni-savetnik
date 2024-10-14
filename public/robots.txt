@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://savetnikzakredite.com
+
+# Sitemaps
+Sitemap: https://savetnikzakredite.com/sitemap.xml

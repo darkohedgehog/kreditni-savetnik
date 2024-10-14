@@ -1,34 +1,6 @@
-interface SiteMetaData {
-    title: string;
-    author: string;
-    headerTitle: string;
-    description: string;
-    language: string;
-    theme: 'system' | 'dark' | 'light';
-    siteUrl: string;
-    siteLogo: string;
-    socialBanner: string;
-    email: string;
-    twitter: string;
-    facebook: string;
-    linkedin: string;
-    instagram: string;
-    locale: string;
-    keywords: string[];
-    robots: string;
-    openGraph: {
-      title: string;
-      description: string;
-      url: string;
-      type: string;
-      images: {
-        url: string;
-        alt: string;
-      }[];
-    };
-  }
+
   
-  const siteMetadata: SiteMetaData = {
+  const siteMetadata = {
     title: 'INFINITUM MSS||Kreditni savetnik',
     author: 'Darko Živić',
     headerTitle: 'Kreditni savetnik',
@@ -68,5 +40,5 @@ interface SiteMetaData {
     },
   };
   
-  export default siteMetadata;
+  module.exports = siteMetadata;
   
