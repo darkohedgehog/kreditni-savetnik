@@ -6,6 +6,7 @@ const HeroSectionWithBeamsAndGrid = dynamic(() => import('@/components/home/Hero
 const MeteorsGrid = dynamic(() => import('@/components/home/MeteorsGrid'));
 const WobbleCardSection = dynamic(() => import('@/components/home/WobbleCardSection'));
 const OutroSection = dynamic(() => import('@/components/home/OutroSection'));
+const CookieConsent = dynamic(() => import('@/components/cookies/CookieConsent'));
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <MeteorsGrid />
       <Approach />
       <OutroSection  />
+      <CookieConsent  />
     </>
   );
 }
