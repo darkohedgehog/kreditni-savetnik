@@ -1,6 +1,5 @@
 import CookiesStatement from '@/components/privacy/CookiesStatement'
 import Privacy from '@/components/privacy/Privacy'
-import TermsOfUse from '@/components/privacy/TermsOfUse'
 import React from 'react'
 import siteMetadata from '../utils/siteMetaData';
 
@@ -37,7 +36,6 @@ const PrivacyPage = () => {
     <>
     <Privacy />
     <CookiesStatement  />
-    <TermsOfUse  />
     </>
   )
 }
