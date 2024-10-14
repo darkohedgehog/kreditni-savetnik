@@ -37,7 +37,7 @@ interface SiteMetaData {
     theme: 'system', // system, dark or light
     siteUrl: process.env.SITE_URL || 'http://localhost:3000', // your website URL
     siteLogo: '/logo.png',
-    socialBanner: '/podrskaklijntu.wepb', // add social banner in the public folder
+    socialBanner: '/social-media.png', // add social banner in the public folder
     email: 'kreditnisaveti@gmail.com',
     twitter: 'https://x.com/',
     facebook: 'https://www.facebook.com/',
@@ -61,7 +61,7 @@ interface SiteMetaData {
       type: 'website',
       images: [
         {
-          url: '/podrskaklijntu.wepb', // Social media banner
+          url: '/social-media.png', // Social media banner
           alt: 'INFINITUM MSS || Kreditni savetnik Social Banner',
         },
       ],
