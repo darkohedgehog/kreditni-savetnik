@@ -18,13 +18,15 @@ const Footer = () => {
             </Link>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-accentblue">
                 <li>
-                    <Link href={"/terms"} className="hover:underline me-4 md:me-6">Uslovi korištenja</Link>
+                    <Link href={"/uslovi-koriscenja"} className="hover:underline me-4 md:me-6">
+                        Uslovi korišćenja</Link>
                 </li>
                 <li>
-                    <Link href={"/privacy"} className="hover:underline me-4 md:me-6">Pravila privatnosti</Link>
+                    <Link href={"/pravila-privatnosti"} className="hover:underline me-4 md:me-6">
+                        Pravila privatnosti</Link>
                 </li>
                 <li>
-                    <Link href={"/contact"} className="hover:underline">Kontakt</Link>
+                    <Link href={"/kontakt"} className="hover:underline">Kontakt</Link>
                 </li>
             </ul>  
         </div>
@@ -35,18 +37,18 @@ const Footer = () => {
         <span className="inline-flex mx-4">
                   <Link 
                   className="text-blue-500" 
-                  href={'https://www.facebook.com/?locale=hr_HR'} target='blank'>
+                  href={'https://www.facebook.com/'} target='blank'>
                   <FiFacebook className='h-6 w-6' />
                   </Link>
                   <Link 
                   className="text-blue-500 mx-2" 
-                  href={'https://business.facebook.com/latest/inbox/messenger?asset_id=137597493551735&business_id=1133499703746344'}
+                  href={'https://business.facebook.com/'}
                   target='blank'>
                   <RiMessengerLine className='h-6 w-6' />
                   </Link>
                   <Link 
                   className="mx-2 text-blue-500" 
-                  href={'mailto:prodaja@zivic-elektro.com'} target='blank'>
+                  href={'mailto:kreditnisaveti@gmail.com'} target='blank'>
                   <MdOutlineAlternateEmail className='h-6 w-6' />
                   </Link>
                   <Link 

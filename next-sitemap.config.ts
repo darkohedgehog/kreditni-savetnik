@@ -33,7 +33,7 @@ const config: IConfig = {
         lastmod: new Date().toISOString(),
       },
       {
-        loc: '/uslovi-koristenja', // Terms page
+        loc: '/uslovi-koriscenja', // Terms page
         changefreq: 'monthly',
         priority: 0.8,
         lastmod: new Date().toISOString(),
