@@ -82,8 +82,6 @@ const BackgroundGrids = () => {
 };
 
 const CollisionMechanism = ({
-  containerRef,
-  parentRef,
   beamOptions = {},
 }: {
   containerRef: React.RefObject<HTMLDivElement>;

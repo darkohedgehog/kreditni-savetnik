@@ -5,7 +5,8 @@ import NavigationMain from "@/components/navigation/NavigationMain";
 import NavTop from "@/components/navigation/NavTop";
 import BackgroundBeams from "@/components/ui/BackgroundBeams";
 import Footer from "@/components/Footer";
-const siteMetadata = require('./utils/siteMetaData').default;
+import siteMetadata from "./utils/siteMetaData";
+
 
 
 const geistSans = localFont({

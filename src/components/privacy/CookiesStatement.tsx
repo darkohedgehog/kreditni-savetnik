@@ -4,7 +4,7 @@ const CookiesStatement = () => {
   return (
     <div className='container p-4 my-16 text-gray'>
      <h2 className='flex items-center justify-center text-accentblue font-bold uppercase text-2xl my-8'>
-        Izjava o "kolačićima"
+        Izjava o kolačićima
     </h2>
     <p className='mt-2'>
     Internet stranica www.savetnikzakredite.com koristi kolačiće (eng. ‘cookies’) kako bi korisniku pružili uslugu s potpunim funkcionalnostima. Kolačići su skup podataka koje generira poslužitelj web stranica i koje web preglednik sprema na disk korisnika u obliku male tekstualne datoteke.
