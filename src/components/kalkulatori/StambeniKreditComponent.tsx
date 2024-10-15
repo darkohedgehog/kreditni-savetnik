@@ -4,14 +4,21 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 const StambeniKreditComponent: React.FC = () => {
-  const [kredit, setKredit] = useState<number>(0);
-  const [meseci, setMeseci] = useState<number>(0);
-  const kamata: number = 5.03;
+  const [kredit, setKredit] = useState<number | undefined>(undefined);;
+  const [meseci, setMeseci] = useState<number | undefined>(undefined);;
+  const [kamata, setKamata] = useState<number | undefined>(undefined);
   const [rata, setRata] = useState<string>('');
   const [ukupno, setUkupno] = useState<string>('');
 
   const izracunajRatu = (): void => {
-    if (kredit > 0 && meseci > 0) {
+    if (
+      kredit !== undefined &&
+      meseci !== undefined &&
+      kamata !== undefined &&
+      kredit > 0 &&
+      meseci > 0 &&
+      kamata > 0
+    ) {
       const mesecnaKamata: number = kamata / 100 / 12;
       const rataBroj: number =
         (kredit * mesecnaKamata) /
@@ -54,8 +61,10 @@ const StambeniKreditComponent: React.FC = () => {
         <input
           type="number"
           placeholder="Unesite iznos kredita"
-          value={kredit}
-          onChange={(e) => setKredit(Number(e.target.value))}
+          value={kredit !== undefined ? kredit : ''}
+          onChange={(e) =>
+            setKredit(e.target.value !== '' ? Number(e.target.value) : undefined)
+          }
           className="w-full px-4 py-2 border rounded-md focus:outline-none
           focus:ring focus:ring-blue-300"
         />
@@ -66,8 +75,10 @@ const StambeniKreditComponent: React.FC = () => {
         <input
           type="number"
           placeholder="Unesite broj meseci"
-          value={meseci}
-          onChange={(e) => setMeseci(Number(e.target.value))}
+          value={meseci !== undefined ? meseci : ''}
+          onChange={(e) =>
+            setMeseci(e.target.value !== '' ? Number(e.target.value) : undefined)
+          }
           className="w-full px-4 py-2 border rounded-md focus:outline-none
           focus:ring focus:ring-blue-300"
         />
@@ -76,9 +87,14 @@ const StambeniKreditComponent: React.FC = () => {
       <div>
         <label className="block text-sm font-medium">Kamata (%)</label>
         <input
-          type="text"
-          value={kamata}
-          readOnly
+          type="number"
+          step="0.01"
+          min="0"
+          placeholder="Unesite kamatnu stopu"
+          value={kamata !== undefined ? kamata : ''}
+          onChange={(e) =>
+            setKamata(e.target.value !== '' ? Number(e.target.value) : undefined)
+          }
           className="w-full px-4 py-2 border bg-gray-100 rounded-md
           focus:outline-none text-black"
         />
@@ -92,7 +108,7 @@ const StambeniKreditComponent: React.FC = () => {
           value={rata}
           readOnly
           className="w-full px-4 py-2 border bg-gray-100 rounded-md
-          focus:outline-none"
+          focus:outline-none text-black"
         />
       </div>
 
@@ -104,14 +120,22 @@ const StambeniKreditComponent: React.FC = () => {
           value={ukupno}
           readOnly
           className="w-full px-4 py-2 border bg-gray-100 rounded-md
-          focus:outline-none"
+          focus:outline-none text-black"
         />
       </div>
 
       <button
         onClick={izracunajRatu}
+        disabled={
+          kredit === undefined ||
+          meseci === undefined ||
+          kamata === undefined ||
+          kredit <= 0 ||
+          meseci <= 0 ||
+          kamata <= 0
+        }
         className="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600
-        focus:outline-none focus:ring-2 focus:ring-blue-400"
+        focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-400"
       >
         Izračunaj
       </button>
