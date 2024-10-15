@@ -5,7 +5,7 @@
     author: 'Darko Živić',
     headerTitle: 'Kreditni savetnik',
     description: 'Finansijski i kreditni saveti, keš krediti, auto krediti, refinansirajući krediti, stambeni krediti',
-    language: 'sr-SR',
+    language: 'sr-Latn-RS',
     theme: 'system', // system, dark or light
     siteUrl: process.env.SITE_URL || 'http://localhost:3000', // your website URL
     siteLogo: '/logo.png',
@@ -15,7 +15,7 @@
     facebook: 'https://www.facebook.com/',
     linkedin: 'https://www.linkedin.com',
     instagram: 'https://www.instagram.com/',
-    locale: 'sr-SR',
+    locale: 'sr-Latn-RS',
     keywords: [
       'Finansijski saveti',
       'Krediti',

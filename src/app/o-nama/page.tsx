@@ -17,7 +17,7 @@ export async function generateMetadata() {
       url: `${siteMetadata.siteUrl}/o-nama`,
       siteName: siteMetadata.title,
       images: [`${siteMetadata.siteUrl}/social-media.png`],
-      locale: "sr_SR",
+      locale: "sr-Latn-RS",
       type: "website",
     },
     twitter: {
