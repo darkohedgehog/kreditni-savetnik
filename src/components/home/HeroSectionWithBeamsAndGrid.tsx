@@ -12,10 +12,10 @@ export default function HeroSectionWithBeamsAndGrid() {
     >
       <h2 className="text-balance relative z-20 mx-auto mb-4 mt-4 max-w-4xl text-center text-3xl font-semibold tracking-tight text-purple dark:text-darkblue md:text-7xl">
         <Balancer>
-          Vaš partner u finansijskom,{" "}
+          Vaš partner u finansijskom{" "}
           <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
             <div className="text-darkblue [text-shadow:0_0_rgba(0,0,0,0.1)] dark:text-accentblue">
-              <span className="">planiranju.</span>
+              <span className="">planiranju</span>
             </div>
           </div>
         </Balancer>
